@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import HeaderApp from "./Componentes/HeaderApp";
+import BarraNavApp from "./Componentes/BarraNavApp";
+import FooterApp from "./Componentes/FooterApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderApp nombreApp="Empresa ppp"></HeaderApp>
+      <BarraNavApp isLogueado="N"></BarraNavApp>
+      <FooterApp></FooterApp>
+    </>
   );
 }
 
