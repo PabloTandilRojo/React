@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <HeaderApp nombreApp="Empresa ppp"></HeaderApp>
-      <BarraNavApp isLogueado="N"></BarraNavApp>
+      <BarraNavApp isLogueado="S"></BarraNavApp>
       <FooterApp></FooterApp>
     </>
   );
