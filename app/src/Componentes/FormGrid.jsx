@@ -12,6 +12,7 @@ import { Button, Box } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   table: {
@@ -71,9 +72,11 @@ export default function SimpleTable() {
   return (
     <>
       <Box m={2}>
-        <Button variant="outlined" color="primary" startIcon={<AddIcon />}>
-          Agregar
-        </Button>
+        <Link to="/Edicion/-1">
+          <Button variant="outlined" color="primary" startIcon={<AddIcon />}>
+            Agregar
+          </Button>
+        </Link>
       </Box>
 
       <TableContainer component={Paper}>
@@ -101,7 +104,9 @@ export default function SimpleTable() {
                   <TableCell align="right">{row.carbs}</TableCell>
                   <TableCell align="right">{row.protein}</TableCell>
                   <TableCell>
-                    <EditIcon color="action" />
+                    <Link to={"/Edicion/" + row.name}>
+                      <EditIcon color="action" />
+                    </Link>
                     <DeleteIcon color="action" />
                   </TableCell>
                 </TableRow>
